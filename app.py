@@ -8,9 +8,7 @@ import numpy as np
 import random
 from collections import Counter, defaultdict
 
-# -------------------------------
 # Load Model
-# -------------------------------
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 checkpoint = torch.load("rps_model_for_app.pth", map_location=DEVICE)
@@ -23,9 +21,7 @@ model.load_state_dict(checkpoint["model_state"])
 model.to(DEVICE)
 model.eval()
 
-# -------------------------------
 # Image Transform
-# -------------------------------
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
     transforms.ToTensor(),
@@ -35,22 +31,20 @@ transform = transforms.Compose([
     )
 ])
 
-# -------------------------------
 # Game Logic
-# -------------------------------
 player_history = []
-sequence_counter = defaultdict(Counter)  # Tracks move sequences
+sequence_counter = defaultdict(Counter)
 wins = losses = draws = 0
 
 def update_sequence_counter(history):
-    """Updates the sequence counter for patterns"""
+    "Updates the sequence counter for patterns"
     if len(history) >= 2:
         prev_move = history[-2]
         curr_move = history[-1]
         sequence_counter[prev_move][curr_move] += 1
 
 def predict_next_move(history):
-    """Predicts player's next move using weighted sequences"""
+    "Predicts player's next move using weighted sequences"
     if len(history) < 2:
         # Not enough history: fallback to most frequent move
         if len(history) == 0:
@@ -90,9 +84,7 @@ def decide_winner(player, ai):
     else:
         losses += 1
 
-# -------------------------------
 # Tkinter App
-# -------------------------------
 class RPSApp:
     def __init__(self, root):
         self.root = root
@@ -126,7 +118,7 @@ class RPSApp:
         if not self.running:
             self.cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
             self.running = True
-            self.next_round_button.config(state="normal")  # Enable button
+            self.next_round_button.config(state="normal")
             self.update_frame()
 
     def stop_camera(self):
@@ -148,7 +140,7 @@ class RPSApp:
             self.video_label.imgtk = img_display
             self.video_label.config(image=img_display)
 
-        self.root.after(30, self.update_frame)  # keep looping camera frames
+        self.root.after(30, self.update_frame)
 
     def next_round(self):
         global player_history
@@ -180,9 +172,7 @@ class RPSApp:
             text=f"Wins: {wins} | Losses: {losses} | Draws: {draws}"
         )
 
-# -------------------------------
 # Run App
-# -------------------------------
 if __name__ == "__main__":
     root = tk.Tk()
     app = RPSApp(root)
