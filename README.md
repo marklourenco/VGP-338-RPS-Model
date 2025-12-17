@@ -31,14 +31,12 @@ The application runs as a **Windows desktop executable**, requiring no Python in
 
 ---
 
-## Setup Instructions (For Development)
+## Setup Instructions
 
 ### 1. Install Python (Development Only)
 
 Download Python 3.10 from:
-[https://www.python.org/downloads/](https://www.python.org/downloads/)
-
-> Make sure “Add Python to PATH” is checked.
+[https://www.python.org/downloads/]([https://www.python.org/downloads/](https://www.python.org/downloads/release/python-3104/))
 
 ---
 
@@ -58,7 +56,7 @@ python app.py
 
 ---
 
-## Running the Executable (For Instructor)
+## Running the Executable
 
 1. Open the provided folder
 2. Double-click `app.exe`
@@ -79,13 +77,6 @@ python app.py
 * Uses residual connections to prevent vanishing gradients
 * Lightweight enough for real-time webcam inference
 * Well-supported and pretrained architecture
-
-**Why not train from scratch?**
-
-* Transfer learning allows faster convergence
-* Requires less data
-* More reliable results for gesture classification
-
 ---
 
 ## Training Process
@@ -163,7 +154,6 @@ This simulates **adaptive opponent behavior**, not just static rules.
 * Requires a webcam
 * Lighting conditions affect accuracy
 * AI learning resets when the app closes
-* Not trained for left/right hand distinction
 
 ---
 
