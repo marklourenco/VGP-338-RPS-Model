@@ -86,6 +86,8 @@ python app.py
 * Images resized to `224×224`
 * Trained using cross-entropy loss
 * Optimized with Adam optimizer
+* Final Accuracy: 98.40%
+* Final Loss: 6.167
 * Final model saved as:
 
 ```text
