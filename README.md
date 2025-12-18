@@ -165,14 +165,12 @@ This simulates **adaptive opponent behavior**, not just static rules.
 
 https://drive.google.com/file/d/1Y8xDz4s2OxqW7F1U4hpOLK-pV0YFKwVY/view?usp=sharing
 
-### Screenshots to Include
+### Screenshots
 
-* Main UI
-* Gesture detection
-* Win/Loss counter
-* AI move display
-
-*Attach demo video or screenshots here.*
+<img width="1387" height="732" alt="image" src="https://github.com/user-attachments/assets/4e5ae51f-f246-460b-9920-afd536e5f952" />
+<img width="729" height="443" alt="image" src="https://github.com/user-attachments/assets/658fbb22-f3c3-422e-b440-bea8d86f7a18" />
+<img width="870" height="850" alt="image" src="https://github.com/user-attachments/assets/779984f1-eb69-475c-85a7-b9b55a5d5e3d" />
+<img width="832" height="872" alt="image" src="https://github.com/user-attachments/assets/6e207fc8-cb98-4b0a-a1d2-aba468c39334" />
 
 ---
 
