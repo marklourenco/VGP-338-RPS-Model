@@ -161,13 +161,9 @@ This simulates **adaptive opponent behavior**, not just static rules.
 
 ## Demo Video / Screenshots
 
-### Demo Video (Suggested Content)
+### Demo Video
 
-* App startup
-* Camera detection
-* Player making gestures
-* AI adapting over multiple rounds
-* Score updating
+https://drive.google.com/file/d/1Y8xDz4s2OxqW7F1U4hpOLK-pV0YFKwVY/view?usp=sharing
 
 ### Screenshots to Include
 
