@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is a **desktop AI application** that plays Rock–Paper–Scissors against a human player using **computer vision and machine learning**.
+This project is a **desktop AI application** that plays Rock Paper Scissors against a human player using **computer vision and machine learning**.
 The AI detects hand gestures using a trained deep learning model and adapts to player behavior by learning patterns in their previous moves.
 
 The application runs as a **Windows desktop executable**, requiring no Python installation on the user’s machine.
@@ -81,7 +81,7 @@ python app.py
 
 ## Training Process
 
-* Dataset: Rock-Paper-Scissors image dataset
+* Dataset: Rock Paper Scissors image dataset
 * Classes: `rock`, `paper`, `scissors`
 * Images resized to `224×224`
 * Trained using cross-entropy loss
